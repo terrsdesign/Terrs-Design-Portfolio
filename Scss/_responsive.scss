@@ -1,0 +1,46 @@
+@media (max-width: 992px) {
+  .projects-grid,
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-card-number {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .nav-wrapper {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    justify-content: flex-end;
+  }
+
+  .hero-section {
+    min-height: auto;
+  }
+
+  .projects-grid,
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-cta {
+    padding: 36px 24px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

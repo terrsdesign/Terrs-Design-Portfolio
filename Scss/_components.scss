@@ -1,0 +1,157 @@
+@use "variables" as v;
+
+.site-logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: v.$color-burgundy;
+}
+
+.nav-menu a {
+  font-size: 0.95rem;
+  color: v.$color-muted;
+
+  &:hover {
+    color: v.$color-burgundy;
+  }
+}
+
+.hero-text {
+  max-width: 640px;
+  margin-bottom: 32px;
+  font-size: 1.2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn-primary-custom,
+.btn-secondary-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.btn-primary-custom {
+  background-color: v.$color-burgundy;
+  color: white;
+
+  &:hover {
+    background-color: #4e1620;
+    color: white;
+  }
+}
+
+.btn-secondary-custom {
+  border: 1px solid v.$color-border;
+  color: v.$color-dark;
+
+  &:hover {
+    border-color: v.$color-burgundy;
+    color: v.$color-burgundy;
+  }
+}
+
+.hero-card {
+  padding: 32px;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  background-color: v.$color-cream;
+}
+
+.hero-card-number {
+  display: block;
+  margin-bottom: 80px;
+  color: v.$color-burgundy;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.project-card {
+  min-height: 320px;
+  padding: 28px;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-number {
+  color: v.$color-burgundy;
+  font-weight: 700;
+}
+
+.project-link {
+  margin-top: 24px;
+  color: v.$color-burgundy;
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.approach-item {
+  padding: 28px;
+  background-color: v.$color-background;
+}
+
+.approach-number {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: v.$color-burgundy;
+  font-weight: 700;
+}
+
+.contact-cta {
+  padding: 56px;
+  border-radius: v.$radius-lg;
+  background-color: v.$color-dark;
+
+  h2,
+  p {
+    color: white;
+  }
+
+  p {
+    max-width: 560px;
+    opacity: 0.78;
+  }
+
+  .section-label {
+    color: v.$color-cream;
+  }
+
+  .btn-primary-custom {
+    margin-top: 20px;
+    background-color: v.$color-cream;
+    color: v.$color-dark;
+
+    &:hover {
+      background-color: white;
+      color: v.$color-burgundy;
+    }
+  }
+}
+
+.footer-content p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: v.$color-muted;
+  font-size: 0.9rem;
+
+  &:hover {
+    color: v.$color-burgundy;
+  }
+}

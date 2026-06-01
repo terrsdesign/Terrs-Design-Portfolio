@@ -1,3 +1,27 @@
+/* =========================
+   TYPOGRAPHY SCALE - DESKTOP
+========================= */
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("assets/fonts/satoshi-variable.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi-VariableItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sundrea";
+  src: url("../assets/fonts/Sundrea.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -11,10 +35,11 @@ html {
 
 body {
   margin: 0;
-  background-color: #fffdf8;
-  color: #181313;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.6;
+  background-color: #FCFAF6;
+  color: #1F1B1C;
+  font-family: "Geist Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.375rem;
 }
 
 img {
@@ -39,7 +64,8 @@ section {
 
 .section-label {
   margin-bottom: 16px;
-  color: #6d1f2a;
+  color: #56061D;
+  font-family: "Sundrea", serif;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -49,6 +75,7 @@ section {
 h1,
 h2,
 h3,
+h4,
 p {
   margin-top: 0;
 }
@@ -56,27 +83,37 @@ p {
 h1 {
   max-width: 900px;
   margin-bottom: 24px;
-  font-size: clamp(3rem, 7vw, 6.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.06em;
+  font-family: "Sundrea", serif;
+  font-size: 4.25rem;
+  line-height: 5.1875rem;
 }
 
 h2 {
   max-width: 760px;
   margin-bottom: 20px;
-  font-size: clamp(2rem, 4vw, 4rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
+  font-family: "Sundrea", serif;
+  font-size: 3.25rem;
+  line-height: 4.0625rem;
 }
 
 h3 {
   margin-bottom: 12px;
-  font-size: 1.35rem;
-  line-height: 1.2;
+  font-family: "Satoshi-Variable", sans-serif;
+  font-size: 2.375rem;
+  line-height: 2.8125rem;
+}
+
+h4 {
+  margin-bottom: 12px;
+  font-family: "Satoshi-Variable", sans-serif;
+  font-size: 1.75rem;
+  line-height: 2.1875rem;
 }
 
 p {
-  color: #6f6661;
+  color: #1F1B1C;
+  font-size: 1rem;
+  line-height: 1.375rem;
 }
 
 .site-header {
@@ -85,7 +122,7 @@ p {
   z-index: 1000;
   background-color: rgba(255, 253, 248, 0.92);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid #e8ddd4;
+  border-bottom: 1px solid #A79A9D;
 }
 
 .nav-wrapper {
@@ -126,22 +163,22 @@ p {
 }
 
 .approach-section {
-  background-color: #f7efe7;
+  background-color: #FCFAF6;
 }
 
 .approach-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  border: 1px solid #e8ddd4;
-  background-color: #e8ddd4;
+  border: 1px solid #A79A9D;
+  background-color: #A79A9D;
   border-radius: 28px;
   overflow: hidden;
 }
 
 .site-footer {
   padding: 32px 0;
-  border-top: 1px solid #e8ddd4;
+  border-top: 1px solid #A79A9D;
 }
 
 .footer-content {
@@ -156,18 +193,22 @@ p {
   gap: 20px;
 }
 
+.style-one {
+  font-feature-settings: "ss01" on;
+}
+
 .site-logo {
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #6d1f2a;
+  color: #56061D;
 }
 
 .nav-menu a {
   font-size: 0.95rem;
-  color: #6f6661;
+  color: #1F1B1C;
 }
 .nav-menu a:hover {
-  color: #6d1f2a;
+  color: #56061D;
 }
 
 .hero-text {
@@ -182,8 +223,65 @@ p {
   gap: 16px;
 }
 
-.btn-primary-custom,
-.btn-secondary-custom {
+.hero-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 1000px;
+  margin-bottom: 32px;
+  font-family: "Sundrea", serif;
+  font-size: 4.25rem;
+  line-height: 5.1875rem;
+  font-weight: 400;
+}
+.hero-title .hero-title-kicker {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  font-family: "Sundrea", serif;
+  font-size: 1.75rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1F1B1C;
+}
+.hero-title .hero-title-arrow {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 85px;
+  height: 2px;
+  margin-bottom: 4px;
+  background-color: #1F1B1C;
+}
+.hero-title .hero-title-arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-top: 1px solid #1F1B1C;
+  border-right: 1px solid #1F1B1C;
+  transform: translateY(-50%) rotate(45deg);
+}
+.hero-title .hero-title-main {
+  display: inline-block;
+}
+.hero-title .hero-title-line {
+  display: block;
+}
+.hero-title .hero-title-small {
+  display: block;
+  max-width: 640px;
+  margin-top: 24px;
+  font-family: "Geist Mono", monospace;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+}
+.hero-title .btn-primary-custom,
+.hero-title .btn-secondary-custom {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -192,114 +290,102 @@ p {
   border-radius: 999px;
   font-weight: 600;
 }
-
-.btn-primary-custom {
-  background-color: #6d1f2a;
+.hero-title .btn-primary-custom {
+  background-color: #56061D;
   color: white;
 }
-.btn-primary-custom:hover {
+.hero-title .btn-primary-custom:hover {
   background-color: #4e1620;
   color: white;
 }
-
-.btn-secondary-custom {
-  border: 1px solid #e8ddd4;
-  color: #181313;
+.hero-title .btn-secondary-custom {
+  border: 1px solid #A79A9D;
+  color: #1F1B1C;
 }
-.btn-secondary-custom:hover {
-  border-color: #6d1f2a;
-  color: #6d1f2a;
+.hero-title .btn-secondary-custom:hover {
+  border-color: #56061D;
+  color: #56061D;
 }
-
-.hero-card {
+.hero-title .hero-card {
   padding: 32px;
-  border: 1px solid #e8ddd4;
+  border: 1px solid #A79A9D;
   border-radius: 28px;
-  background-color: #f7efe7;
+  background-color: #FCFAF6;
 }
-
-.hero-card-number {
+.hero-title .hero-card-number {
   display: block;
   margin-bottom: 80px;
-  color: #6d1f2a;
+  color: #56061D;
   font-size: 0.9rem;
   font-weight: 700;
 }
-
-.project-card {
+.hero-title .project-card {
   min-height: 320px;
   padding: 28px;
-  border: 1px solid #e8ddd4;
+  border: 1px solid #A79A9D;
   border-radius: 28px;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-.project-number {
-  color: #6d1f2a;
+.hero-title .project-number {
+  color: #56061D;
   font-weight: 700;
 }
-
-.project-link {
+.hero-title .project-link {
   margin-top: 24px;
-  color: #6d1f2a;
+  color: #56061D;
   font-weight: 700;
 }
-.project-link:hover {
+.hero-title .project-link:hover {
   text-decoration: underline;
 }
-
-.approach-item {
+.hero-title .approach-item {
   padding: 28px;
-  background-color: #fffdf8;
+  background-color: #FCFAF6;
 }
-
-.approach-number {
+.hero-title .approach-number {
   display: inline-block;
   margin-bottom: 40px;
-  color: #6d1f2a;
+  color: #56061D;
   font-weight: 700;
 }
-
-.contact-cta {
+.hero-title .contact-cta {
   padding: 56px;
   border-radius: 28px;
-  background-color: #181313;
+  background-color: #1F1B1C;
 }
-.contact-cta h2,
-.contact-cta p {
+.hero-title .contact-cta h2,
+.hero-title .contact-cta p {
   color: white;
 }
-.contact-cta p {
+.hero-title .contact-cta p {
   max-width: 560px;
   opacity: 0.78;
 }
-.contact-cta .section-label {
-  color: #f7efe7;
+.hero-title .contact-cta .section-label {
+  color: #FCFAF6;
 }
-.contact-cta .btn-primary-custom {
+.hero-title .contact-cta .btn-primary-custom {
   margin-top: 20px;
-  background-color: #f7efe7;
-  color: #181313;
+  background-color: #FCFAF6;
+  color: #1F1B1C;
 }
-.contact-cta .btn-primary-custom:hover {
+.hero-title .contact-cta .btn-primary-custom:hover {
   background-color: white;
-  color: #6d1f2a;
+  color: #56061D;
 }
-
-.footer-content p {
+.hero-title .footer-content p {
   margin-bottom: 0;
   font-size: 0.9rem;
 }
-
-.footer-links a {
-  color: #6f6661;
+.hero-title .footer-links a {
+  color: #1F1B1C;
   font-size: 0.9rem;
 }
-.footer-links a:hover {
-  color: #6d1f2a;
+.hero-title .footer-links a:hover {
+  color: #56061D;
 }
 
 @media (max-width: 992px) {
@@ -309,6 +395,19 @@ p {
   }
   .hero-card-number {
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .hero-title-arrow {
+    width: 56px;
+  }
+  .hero-title-main {
+    max-width: 100%;
   }
 }
 @media (max-width: 768px) {

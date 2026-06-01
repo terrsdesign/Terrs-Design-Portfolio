@@ -1,17 +1,21 @@
 @use "variables" as v;
 
+.style-one {
+  font-feature-settings: "ss01" on;
+}
+
 .site-logo {
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: v.$color-burgundy;
+  color: v.$secondary-color;
 }
 
 .nav-menu a {
   font-size: 0.95rem;
-  color: v.$color-muted;
+  color: v.$neutral-dark;
 
   &:hover {
-    color: v.$color-burgundy;
+    color: v.$secondary-color;
   }
 }
 
@@ -27,6 +31,69 @@
   gap: 16px;
 }
 
+.hero-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 1000px;
+  margin-bottom: 32px;
+  font-family: v.$font-heading;
+  font-size: v.$font-size-h1;
+  line-height: v.$line-height-h1;
+  font-weight: 400;
+
+.hero-title-kicker {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  font-family: v.$font-heading;
+  font-size: v.$font-size-h4;
+  line-height: v.$line-height-label;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: v.$neutral-dark;
+}
+
+.hero-title-arrow {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 85px;
+  height: 2px;
+  margin-bottom: 4px;
+  background-color: v.$neutral-dark;
+}
+
+.hero-title-arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-top: 1px solid v.$neutral-dark;
+  border-right: 1px solid v.$neutral-dark;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hero-title-main {
+  display: inline-block;
+}
+
+.hero-title-line {
+  display: block;
+}
+
+.hero-title-small {
+  display: block;
+  max-width: 640px;
+  margin-top: 24px;
+  font-family: v.$font-main;
+  font-size: v.$font-size-body-lg;
+  line-height: v.$line-height-body-lg;
+}
+
 .btn-primary-custom,
 .btn-secondary-custom {
   display: inline-flex;
@@ -39,7 +106,7 @@
 }
 
 .btn-primary-custom {
-  background-color: v.$color-burgundy;
+  background-color: v.$secondary-color;
   color: white;
 
   &:hover {
@@ -49,26 +116,26 @@
 }
 
 .btn-secondary-custom {
-  border: 1px solid v.$color-border;
-  color: v.$color-dark;
+  border: 1px solid v.$neutral-light;
+  color: v.$neutral-dark;
 
   &:hover {
-    border-color: v.$color-burgundy;
-    color: v.$color-burgundy;
+    border-color: v.$secondary-color;
+    color: v.$secondary-color;
   }
 }
 
 .hero-card {
   padding: 32px;
-  border: 1px solid v.$color-border;
+  border: 1px solid v.$neutral-light;
   border-radius: v.$radius-lg;
-  background-color: v.$color-cream;
+  background-color: v.$primary-color;
 }
 
 .hero-card-number {
   display: block;
   margin-bottom: 80px;
-  color: v.$color-burgundy;
+  color: v.$secondary-color;
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -76,7 +143,7 @@
 .project-card {
   min-height: 320px;
   padding: 28px;
-  border: 1px solid v.$color-border;
+  border: 1px solid v.$neutral-light;
   border-radius: v.$radius-lg;
   background-color: white;
   display: flex;
@@ -85,13 +152,13 @@
 }
 
 .project-number {
-  color: v.$color-burgundy;
+  color: v.$secondary-color;
   font-weight: 700;
 }
 
 .project-link {
   margin-top: 24px;
-  color: v.$color-burgundy;
+  color: v.$secondary-color;
   font-weight: 700;
 
   &:hover {
@@ -101,20 +168,20 @@
 
 .approach-item {
   padding: 28px;
-  background-color: v.$color-background;
+  background-color: v.$primary-color;
 }
 
 .approach-number {
   display: inline-block;
   margin-bottom: 40px;
-  color: v.$color-burgundy;
+  color: v.$secondary-color;
   font-weight: 700;
 }
 
 .contact-cta {
   padding: 56px;
   border-radius: v.$radius-lg;
-  background-color: v.$color-dark;
+  background-color: v.$neutral-dark;
 
   h2,
   p {
@@ -127,17 +194,17 @@
   }
 
   .section-label {
-    color: v.$color-cream;
+    color: v.$primary-color;
   }
 
   .btn-primary-custom {
     margin-top: 20px;
-    background-color: v.$color-cream;
-    color: v.$color-dark;
+    background-color: v.$primary-color;
+    color: v.$neutral-dark;
 
     &:hover {
       background-color: white;
-      color: v.$color-burgundy;
+      color: v.$secondary-color;
     }
   }
 }
@@ -148,10 +215,11 @@
 }
 
 .footer-links a {
-  color: v.$color-muted;
+  color: v.$neutral-dark;
   font-size: 0.9rem;
 
   &:hover {
-    color: v.$color-burgundy;
+    color: v.$secondary-color;
   }
-}
+  }
+  }

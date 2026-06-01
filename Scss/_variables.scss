@@ -1,13 +1,53 @@
-$color-background: #fffdf8;
-$color-cream: #f7efe7;
-$color-burgundy: #6d1f2a;
-$color-dark: #181313;
-$color-muted: #6f6661;
-$color-border: #e8ddd4;
+$primary-color: #FCFAF6;
+$secondary-color: #56061D;
+$accent-color: #7DA6BB;
+$neutral-dark: #1F1B1C;
+$neutral-medium: #4A4243;
+$neutral-light: #A79A9D;
 
-$font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-main: "Geist Mono", monospace;
+$font-heading: "Sundrea", serif;
+$font-accent: "Satoshi-Variable", sans-serif;
+
+/* =========================
+   TYPOGRAPHY SCALE - DESKTOP
+========================= */
+
+
+
+$font-size-h1: 4.25rem; // 68px
+$line-height-h1: 5.1875rem; // 83px
+
+$font-size-h2: 3.25rem; // 52px
+$line-height-h2: 4.0625rem; // 65px
+
+$font-size-h3: 2.375rem; // 38px
+$line-height-h3: 2.8125rem; // 45px
+
+$font-size-h4: 1.75rem; // 28px
+$line-height-h4: 2.1875rem; // 35px
+
+$font-size-body-lg: 1.25rem; // 20px
+$line-height-body-lg: 1.625rem; // 26px
+
+$font-size-body: 1rem; // 16px
+$line-height-body: 1.375rem; // 22px
+
+$font-size-body-sm: 0.875rem; // 14px
+$line-height-body-sm: 1rem; // 16px
+
+$font-size-label: 1rem; // 16px
+$line-height-label: 1.375rem; // 22px
+
+$font-size-link: 1rem; // 16px
+$line-height-link: 1.5rem; // 24px
+
+$font-size-link-sm: 0.8125rem; // 13px
+$line-height-link-sm: 1rem; // 16px
+
 
 $radius-md: 16px;
 $radius-lg: 28px;
 
 $section-padding: 96px;
+

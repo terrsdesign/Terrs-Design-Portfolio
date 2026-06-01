@@ -9,6 +9,23 @@
   }
 }
 
+
+@media (max-width: 768px) {
+  .hero-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hero-title-arrow {
+    width: 56px;
+  }
+
+  .hero-title-main {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   section {
     padding-top: 72px;

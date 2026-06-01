@@ -2,6 +2,25 @@
 
 .style-one {
   font-feature-settings: "ss01" on;
+  
+}
+
+.diagonal-highlight {
+  display: inline-block;
+  padding: 0.08em 0.20em;
+  background-color: v.$accent-color;
+  color: v.$secondary-color;
+  transform: rotate(-3deg);
+  transform-origin: center;
+  line-height: 1;
+  font-family: v.$font-accent;
+  border-radius: 4px;
+  margin: 0 4px;
+}
+
+.bigger-word {
+  display: inline-block;
+  font-size: 120%;
 }
 
 .site-logo {
@@ -20,10 +39,11 @@
 }
 
 .hero-text {
-  max-width: 640px;
+  max-width: fit-content;
   margin-bottom: 32px;
-  font-size: 1.2rem;
-}
+  font-family: v.$font-main;
+  font-size: v.$font-size-body-lg;
+  line-height: v.$line-height-body-lg;}
 
 .hero-actions {
   display: flex;
@@ -52,7 +72,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: v.$neutral-dark;
+  color: v.$accent-color;
 }
 
 .hero-title-arrow {
@@ -92,6 +112,20 @@
   font-family: v.$font-main;
   font-size: v.$font-size-body-lg;
   line-height: v.$line-height-body-lg;
+}
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .btn-primary-custom,

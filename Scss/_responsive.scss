@@ -27,6 +27,16 @@
 }
 
 @media (max-width: 768px) {
+  .hero-image-wrapper {
+    margin-top: 32px;
+  }
+
+  .hero-image {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
   section {
     padding-top: 72px;
     padding-bottom: 72px;

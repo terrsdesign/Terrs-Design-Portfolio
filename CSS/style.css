@@ -37,13 +37,13 @@ body {
   margin: 0;
   background-color: #FCFAF6;
   color: #1F1B1C;
-  font-family: "Geist Mono", monospace;
+  font-family: "Satoshi-Variable", sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
 }
 
 img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
 
@@ -64,7 +64,7 @@ section {
 
 .section-label {
   margin-bottom: 16px;
-  color: #56061D;
+  color: #720E2B;
   font-family: "Sundrea", serif;
   font-size: 0.78rem;
   font-weight: 700;
@@ -86,6 +86,7 @@ h1 {
   font-family: "Sundrea", serif;
   font-size: 4.25rem;
   line-height: 5.1875rem;
+  color: #720E2B;
 }
 
 h2 {
@@ -98,14 +99,14 @@ h2 {
 
 h3 {
   margin-bottom: 12px;
-  font-family: "Satoshi-Variable", sans-serif;
+  font-family: "Geist Mono", monospace;
   font-size: 2.375rem;
   line-height: 2.8125rem;
 }
 
 h4 {
   margin-bottom: 12px;
-  font-family: "Satoshi-Variable", sans-serif;
+  font-family: "Geist Mono", monospace;
   font-size: 1.75rem;
   line-height: 2.1875rem;
 }
@@ -197,10 +198,28 @@ p {
   font-feature-settings: "ss01" on;
 }
 
+.diagonal-highlight {
+  display: inline-block;
+  padding: 0.08em 0.2em;
+  background-color: #7DA6BB;
+  color: #720E2B;
+  transform: rotate(-3deg);
+  transform-origin: center;
+  line-height: 1;
+  font-family: "Geist Mono", monospace;
+  border-radius: 4px;
+  margin: 0 4px;
+}
+
+.bigger-word {
+  display: inline-block;
+  font-size: 120%;
+}
+
 .site-logo {
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #56061D;
+  color: #720E2B;
 }
 
 .nav-menu a {
@@ -208,13 +227,16 @@ p {
   color: #1F1B1C;
 }
 .nav-menu a:hover {
-  color: #56061D;
+  color: #720E2B;
 }
 
 .hero-text {
-  max-width: 640px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   margin-bottom: 32px;
-  font-size: 1.2rem;
+  font-family: "Satoshi-Variable", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
 }
 
 .hero-actions {
@@ -244,7 +266,7 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #1F1B1C;
+  color: #7DA6BB;
 }
 .hero-title .hero-title-arrow {
   position: relative;
@@ -276,9 +298,22 @@ p {
   display: block;
   max-width: 640px;
   margin-top: 24px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Satoshi-Variable", sans-serif;
   font-size: 1.25rem;
   line-height: 1.625rem;
+}
+.hero-title .hero-image-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.hero-title .hero-image {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .hero-title .btn-primary-custom,
 .hero-title .btn-secondary-custom {
@@ -291,7 +326,7 @@ p {
   font-weight: 600;
 }
 .hero-title .btn-primary-custom {
-  background-color: #56061D;
+  background-color: #720E2B;
   color: white;
 }
 .hero-title .btn-primary-custom:hover {
@@ -303,8 +338,8 @@ p {
   color: #1F1B1C;
 }
 .hero-title .btn-secondary-custom:hover {
-  border-color: #56061D;
-  color: #56061D;
+  border-color: #720E2B;
+  color: #720E2B;
 }
 .hero-title .hero-card {
   padding: 32px;
@@ -315,7 +350,7 @@ p {
 .hero-title .hero-card-number {
   display: block;
   margin-bottom: 80px;
-  color: #56061D;
+  color: #720E2B;
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -330,12 +365,12 @@ p {
   justify-content: space-between;
 }
 .hero-title .project-number {
-  color: #56061D;
+  color: #720E2B;
   font-weight: 700;
 }
 .hero-title .project-link {
   margin-top: 24px;
-  color: #56061D;
+  color: #720E2B;
   font-weight: 700;
 }
 .hero-title .project-link:hover {
@@ -348,7 +383,7 @@ p {
 .hero-title .approach-number {
   display: inline-block;
   margin-bottom: 40px;
-  color: #56061D;
+  color: #720E2B;
   font-weight: 700;
 }
 .hero-title .contact-cta {
@@ -374,7 +409,7 @@ p {
 }
 .hero-title .contact-cta .btn-primary-custom:hover {
   background-color: white;
-  color: #56061D;
+  color: #720E2B;
 }
 .hero-title .footer-content p {
   margin-bottom: 0;
@@ -385,7 +420,7 @@ p {
   font-size: 0.9rem;
 }
 .hero-title .footer-links a:hover {
-  color: #56061D;
+  color: #720E2B;
 }
 
 @media (max-width: 992px) {
@@ -408,6 +443,14 @@ p {
   }
   .hero-title-main {
     max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .hero-image-wrapper {
+    margin-top: 32px;
+  }
+  .hero-image {
+    max-width: 260px;
   }
 }
 @media (max-width: 768px) {

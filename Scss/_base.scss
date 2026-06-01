@@ -46,7 +46,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
 
@@ -89,6 +89,7 @@ h1 {
   font-family: v.$font-heading;
   font-size: v.$font-size-h1;
   line-height: v.$line-height-h1;
+  color: v.$secondary-color;
 }
 
 h2 {

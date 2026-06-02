@@ -1,4 +1,103 @@
 @use "variables" as v;
+@use "sass:color";
+
+/* BUTTONS / CTA */
+
+.btn-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  text-decoration: none;
+  font-family: v.$font-accent;
+  font-weight: 400;
+  line-height: 1;
+  color: v.$primary-color;
+  font-size: v.$font-size-label;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Sizes */
+
+.btn-custom-large {
+  min-width: 200px;
+  min-height: 40px;
+  padding: 8px 32px;
+  border-radius: v.$radius-md;
+  font-size: v.$font-size-label;
+  line-height: v.$line-height-label;
+}
+
+.btn-custom-small {
+  min-width: 140px;
+  min-height: 30px;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-size: v.$font-size-link-sm;
+  line-height: v.$line-height-link-sm;
+}
+
+/* Primary: blue */
+
+.btn-custom-primary {
+  background-color: v.$accent-color;
+  color: v.$primary-color;
+  box-shadow: 0 6px 12px rgba(31, 27, 28, 0.18);
+
+  &:hover {
+    background-color: color.adjust(v.$accent-color, $lightness: -10%);
+    color: v.$primary-color;
+    transform: rotate(-2deg);
+  }
+
+  &:active {
+    background-color: color.adjust(v.$accent-color, $lightness: -20%);
+    color: v.$primary-color;
+    transform: rotate(0deg);
+    box-shadow: none;
+  }
+}
+
+/* Secondary: grey */
+
+.btn-custom-secondary {
+  background-color: color.adjust(v.$neutral-light, $lightness: 10%);
+  color: v.$primary-color;
+  box-shadow: 0 6px 12px rgba(31, 27, 28, 0.18);
+
+  &:hover {
+    background-color: v.$neutral-light;
+    color: v.$primary-color;
+    transform: rotate(-2deg);
+  }
+
+  &:active {
+    background-color: color.adjust(v.$neutral-light, $lightness: -10%);
+    color: v.$primary-color;
+    transform: rotate(0deg);
+    box-shadow: none;
+  }
+}
+
+/* Disabled */
+
+.btn-custom.is-disabled,
+.btn-custom:disabled {
+  background-color: v.$neutral-light;
+  color: v.$primary-color;
+  pointer-events: none;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
 
 .style-one {
   font-feature-settings: "ss01" on;
@@ -115,16 +214,17 @@
 }
 
 .hero-image-wrapper {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 .hero-image {
-  width: 100%;
-  max-width: 360px;
-  height: auto;
   display: block;
+  width: min(100%, 300px);
+  max-width: 300px;
+  height: auto;
   object-fit: contain;
 }
 
@@ -242,6 +342,61 @@
     }
   }
 }
+
+
+
+/* =========================
+   DIAGONAL MARQUEE
+========================= */
+
+.diagonal-marquee-section {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.diagonal-marquee {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 130vw;
+  transform: translate(-50%, -50%) rotate(-4deg);
+  background-color: v.$secondary-color;
+  color: v.$primary-color;
+  overflow: hidden;
+  padding: 18px 0;
+}
+
+.diagonal-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 48px;
+  animation: marquee-scroll 24s linear infinite;
+}
+
+.diagonal-marquee-track span {
+  flex-shrink: 0;
+  font-family: v.$font-accent;
+  font-size: v.$font-size-label;
+  line-height: v.$line-height-label;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
 
 .footer-content p {
   margin-bottom: 0;

@@ -1,7 +1,7 @@
 @use "variables" as v;
 @use "sass:color";
 
-/* BUTTONS / CTA */
+/* ------------------BUTTONS / CTA--------------------------- */
 
 .btn-custom {
   display: inline-flex;
@@ -97,7 +97,7 @@
   box-shadow: none;
   transform: none;
 }
-
+/* -----------------------------END BUTTON---------------------------------- */
 
 .style-one {
   font-feature-settings: "ss01" on;
@@ -122,20 +122,44 @@
   font-size: 120%;
 }
 
+
+/* ------------------Nav Menu--------------------------- */
+
 .site-logo {
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: v.$secondary-color;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 28px;
+  flex-shrink: 0;
+}
+
+
+.site-logo {
+  font-family: v.$font-heading;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 400;
+  color: v.$accent-color;
+  text-decoration: none;
 }
 
 .nav-menu a {
-  font-size: 0.95rem;
-  color: v.$neutral-dark;
+  font-family: v.$font-accent;
+  font-size: v.$font-size-label;
+  line-height: v.$line-height-label;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: v.$primary-color;
+  text-decoration: none;
 
   &:hover {
     color: v.$secondary-color;
   }
 }
+
+/* ------------------ FINE Nav Menu--------------------------- */
+
 
 .hero-text {
   max-width: fit-content;
@@ -160,6 +184,7 @@
   font-size: v.$font-size-h1;
   line-height: v.$line-height-h1;
   font-weight: 400;
+}
 
 .hero-title-kicker {
   display: flex;
@@ -215,90 +240,94 @@
 
 .hero-image-wrapper {
   width: 100%;
+  max-width: 320px;
+  margin-left: auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-image {
   display: block;
-  width: min(100%, 300px);
-  max-width: 300px;
+  width: 100%;
+  max-width: 260px;
   height: auto;
   object-fit: contain;
 }
 
-.btn-primary-custom,
-.btn-secondary-custom {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 12px 24px;
-  border-radius: 999px;
-  font-weight: 600;
+
+
+/* --------------------------- PROJECTS ----------------------------------- */
+
+
+.projects-section .section-heading {
+  max-width: 760px;
+  margin-left: auto;
+  text-align: right;
 }
 
-.btn-primary-custom {
-  background-color: v.$secondary-color;
-  color: white;
-
-  &:hover {
-    background-color: #4e1620;
-    color: white;
-  }
-}
-
-.btn-secondary-custom {
-  border: 1px solid v.$neutral-light;
-  color: v.$neutral-dark;
-
-  &:hover {
-    border-color: v.$secondary-color;
-    color: v.$secondary-color;
-  }
-}
-
-.hero-card {
-  padding: 32px;
-  border: 1px solid v.$neutral-light;
-  border-radius: v.$radius-lg;
-  background-color: v.$primary-color;
-}
-
-.hero-card-number {
-  display: block;
-  margin-bottom: 80px;
-  color: v.$secondary-color;
-  font-size: 0.9rem;
-  font-weight: 700;
+.projects-asymmetric-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  align-items: stretch;
 }
 
 .project-card {
-  min-height: 320px;
   padding: 28px;
   border: 1px solid v.$neutral-light;
   border-radius: v.$radius-lg;
-  background-color: white;
+  background-color: v.$primary-color;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.project-number {
-  color: v.$secondary-color;
-  font-weight: 700;
+.project-card-large {
+  min-height: 460px;
 }
 
-.project-link {
-  margin-top: 24px;
-  color: v.$secondary-color;
-  font-weight: 700;
-
-  &:hover {
-    text-decoration: underline;
-  }
+.project-card-small {
+  min-height: 320px;
 }
+
+.project-card-01 {
+  grid-column: 1 / span 7;
+}
+
+.project-card-02 {
+  grid-column: 8 / span 5;
+}
+
+.project-card-03 {
+  grid-column: 1 / span 5;
+}
+
+.project-card-04 {
+  grid-column: 6 / span 7;
+}
+
+
+.project-category {
+  margin-bottom: 12px;
+  color: v.$accent-color;
+  font-family: v.$font-accent;
+  font-size: v.$font-size-link-sm;
+  line-height: v.$line-height-link-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.project-card h3 {
+  margin-bottom: 16px;
+}
+
+.project-card p {
+  max-width: 420px;
+}
+/* -------------------------END PROJECTS--------------------------- */
 
 .approach-item {
   padding: 28px;
@@ -345,15 +374,17 @@
 
 
 
-/* =========================
-   DIAGONAL MARQUEE
-========================= */
+/*  DIAGONAL MARQUEE */
 
 .diagonal-marquee-section {
-  position: relative;
-  height: 180px;
-  overflow: hidden;
-  padding: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: clamp(10px, 3vw, 50px);
+  height: 120px;
+  z-index: 5;
+  overflow: visible;
+  pointer-events: none;
 }
 
 .diagonal-marquee {
@@ -365,14 +396,15 @@
   background-color: v.$secondary-color;
   color: v.$primary-color;
   overflow: hidden;
-  padding: 18px 0;
+  padding: 8px 0;
+  z-index: 10;
 }
 
 .diagonal-marquee-track {
   display: flex;
   width: max-content;
   gap: 48px;
-  animation: marquee-scroll 24s linear infinite;
+  animation: marquee-scroll 30s linear infinite;
 }
 
 .diagonal-marquee-track span {
@@ -380,7 +412,7 @@
   font-family: v.$font-accent;
   font-size: v.$font-size-label;
   line-height: v.$line-height-label;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   white-space: nowrap;
@@ -411,4 +443,4 @@
     color: v.$secondary-color;
   }
   }
-  }
+  

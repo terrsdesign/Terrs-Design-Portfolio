@@ -32,15 +32,20 @@
 <body>
 <header class="site-header">
   <nav class="navbar">
-    <div class="container nav-wrapper">
+    <div class="container page-container nav-wrapper">
 
-      <a href="index.html" class="site-logo">MB</a>
-
-      <ul class="nav-menu">
+      <ul class="nav-menu nav-menu-left">
         <li><a href="index.html">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#approach">Approach</a></li>
-        <li><a href="aboutme.html">About</a></li>
+      </ul>
+
+      <a href="index.html" class="site-logo" aria-label="Back to homepage">
+        MB
+      </a>
+
+      <ul class="nav-menu nav-menu-right">
+        <li><a href="aboutme.html">About me</a></li>
         <li><a href="cv.html">CV</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -94,10 +99,9 @@
 
     </div>
   </div>
-</section>
 
 
-  <!-- Diagonal Bar Marquee -->
+    <!-- Diagonal Bar Marquee -->
 
 <section class="diagonal-marquee-section" aria-label="Portfolio focus areas">
   <div class="diagonal-marquee">
@@ -109,7 +113,8 @@
       <span>HTML/CSS/SASS</span>
       <span>AI & AI Agents</span>
       <span>Design Systems</span>
-
+      <span>Brand Strategy</span>
+      <div class="diagonal-marquee-group" aria-hidden="true"></div>
       <span>UX Research</span>
       <span>Design Thinking</span>
       <span>Prototyping</span>
@@ -117,55 +122,91 @@
       <span>HTML/CSS/SASS</span>
       <span>AI & AI Agents</span>
       <span>Design Systems</span>
+      <span>Brand Strategy</span>
     </div>
   </div>
 </section>
+</section>
 
+<!-------------------- END Diagonal Bar Marquee ----------------------->
+
+
+
+<!-- Projects Block -->
 
 <section class="projects-section" id="projects">
-  <div class="container">
+  <div class="container page-container">
 
     <div class="section-heading">
-      <p class="section-label">Selected work</p>
-      <h2>UX/UI case studies</h2>
-      <p>
-        A selection of projects focused on research, structure, interface design and usability.
-      </p>
+      <h2>W<span class="style-one">h</span>at I can do</h2>
     </div>
 
-    <div class="projects-grid">
+    <div class="projects-asymmetric-grid">
 
-      <article class="project-card">
-        <p class="project-number">01</p>
-        <h3>E-commerce Checkout Redesign</h3>
-        <p>
-          Improving clarity, trust and usability in the purchase flow.
-        </p>
-        <a href="#" class="project-link">View case study</a>
+      <article class="project-card project-card-large project-card-01">
+
+        <div>
+          <p class="project-category">UX/UI Case Study</p>
+          <h3>E-commerce Checkout Redesign</h3>
+          <p>
+            Improving clarity, trust and usability in the purchase flow.
+          </p>
+        </div>
+
+        <a href="#" class="btn-custom btn-custom-small btn-custom-primary">
+          View case study
+        </a>
       </article>
 
-      <article class="project-card">
-        <p class="project-number">02</p>
-        <h3>Wellness App Concept</h3>
-        <p>
-          Designing a calm and intuitive mobile experience for daily self-care.
-        </p>
-        <a href="#" class="project-link">View case study</a>
+      <article class="project-card project-card-small project-card-02">
+        <div>
+          <p class="project-category">Mobile App</p>
+          <h3>Wellness App Concept</h3>
+          <p>
+            Designing a calm and intuitive experience for daily self-care.
+          </p>
+        </div>
+
+        <a href="#" class="btn-custom btn-custom-small btn-custom-secondary">
+          View case study
+        </a>
       </article>
 
-      <article class="project-card">
-        <p class="project-number">03</p>
-        <h3>Portfolio Website</h3>
-        <p>
-          Creating a personal digital space with a clear UX structure and crafted visual identity.
-        </p>
-        <a href="#" class="project-link">View case study</a>
+      <article class="project-card project-card-small project-card-03">
+        <div>
+          <p class="project-category">Brand Website</p>
+          <h3>Craft Brand Website</h3>
+          <p>
+            Creating a digital space for a handmade and independent brand.
+          </p>
+        </div>
+
+        <a href="#" class="btn-custom btn-custom-small btn-custom-secondary">
+          View case study
+        </a>
+      </article>
+
+      <article class="project-card project-card-large project-card-04">
+        <div>
+          <p class="project-category">Portfolio Project</p>
+          <h3>Personal Portfolio</h3>
+          <p>
+            Designing and developing a personal portfolio with a clear structure and crafted visual identity.
+          </p>
+        </div>
+
+        <a href="#" class="btn-custom btn-custom-small btn-custom-primary">
+          View case study
+        </a>
       </article>
 
     </div>
 
   </div>
 </section>
+
+<!---------------- END Projects Block ---------------------------->
+
 
 <section class="approach-section" id="approach">
   <div class="container">

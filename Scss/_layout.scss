@@ -1,34 +1,49 @@
 @use "variables" as v;
 
+
+/* ------------------LAYOUT / STRUCTURE--------------------------- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgba(255, 253, 248, 0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid v.$neutral-light;
+  background-color: v.$secondary-color;
+  border-bottom: 1px solid rgba(167, 154, 157, 0.25);
+}
+
+.navbar {
+  width: 100%;
+  padding: 0;
 }
 
 .nav-wrapper {
+  width: fit-content;
+  min-height: 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  justify-content: center;
+  gap: 48px;
 }
 
 .nav-menu {
   display: flex;
-  gap: 28px;
+  align-items: center;
+  gap: 48px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.site-logo {
+  flex-shrink: 0;
+}
+/* ------------------FINE LAYOUT / STRUCTURE--------------------------- */
+
+
 .hero-section {
-  min-height: calc(100vh - 80px);
-  display: flex;
-  align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  padding-bottom: clamp(100px, 12vw, 180px);
 }
 
 .hero-row {
@@ -38,7 +53,13 @@
 .section-heading {
   max-width: 760px;
   margin-bottom: 48px;
+  color: v.$secondary-color;
 }
+
+.projects-section {
+  padding-top: 0px;
+}
+
 
 .projects-grid {
   display: grid;

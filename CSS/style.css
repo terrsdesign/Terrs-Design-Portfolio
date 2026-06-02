@@ -1,21 +1,21 @@
 /* =========================  TYPOGRAPHY SCALE - DESKTOP ========================= */
 @font-face {
   font-family: "Satoshi-Variable";
-  src: url("assets/fonts/satoshi-variable.woff2") format("woff2");
+  src: url("Assets/Fonts/Satoshi-Variable.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-VariableItalic.woff2") format("woff2");
+  src: url("Assets/Fonts/Satoshi-VariableItalic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Sundrea";
-  src: url("../assets/fonts/Sundrea.woff2") format("woff2");
+  src: url("Assets/Fonts/Sundrea.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

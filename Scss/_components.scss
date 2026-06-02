@@ -262,37 +262,6 @@
 /* --------------------------- PROJECTS ----------------------------------- */
 
 
-.projects-section .section-heading {
-  max-width: 760px;
-  margin-left: auto;
-  text-align: right;
-}
-
-.projects-asymmetric-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 24px;
-  align-items: stretch;
-}
-
-.project-card {
-  padding: 28px;
-  border: 1px solid v.$neutral-light;
-  border-radius: v.$radius-lg;
-  background-color: v.$primary-color;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.project-card-large {
-  min-height: 460px;
-}
-
-.project-card-small {
-  min-height: 320px;
-}
-
 .project-card-01 {
   grid-column: 1 / span 7;
 }
@@ -309,24 +278,151 @@
   grid-column: 6 / span 7;
 }
 
+.project-card {
+  position: relative;
+  overflow: visible;
+  padding: 0;
+  border: 1px solid color.adjust(v.$primary-color, $lightness: -5%);
+  border-radius: v.$radius-lg;
+  background-color: v.$primary-color;
+  display: flex;
+  flex-direction: column;
+}
 
-.project-category {
-  margin-bottom: 12px;
-  color: v.$accent-color;
+.project-card-large {
+  min-height: 460px;
+}
+
+.project-card-small {
+  min-height: 320px;
+}
+
+.project-card-title {
+  position: absolute;
+  top: -16px;
+  left: 28px;
+  display: inline-flex;
+  align-items: center;
+  max-width: calc(100% - 56px);
+  padding: 4px 18px;
+  border-radius: 8px;
   font-family: v.$font-accent;
   font-size: v.$font-size-link-sm;
   line-height: v.$line-height-link-sm;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  color: v.$neutral-dark;
+  z-index: 2;
 }
 
-.project-card h3 {
-  margin-bottom: 16px;
+.project-card--uxui .project-card-title {
+  background-color: v.$project-uxui-color;
 }
 
-.project-card p {
+.project-card--branding .project-card-title {
+  background-color: v.$project-branding-color;
+}
+
+.project-card-main {
+  flex: 1;
+  display: grid;
+  padding-top: 16px;
+}
+
+.project-card-main-horizontal {
+  grid-template-columns: 0.95fr 1.35fr;
+}
+
+.project-card-main-vertical {
+  grid-template-columns: 1fr;
+}
+
+.project-card-media {
+  min-height: 180px;
+  background-color: rgba(125, 166, 187, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card-main-horizontal .project-card-media {
+  height: 100%;
+}
+
+.project-card-icon {
+  font-family: v.$font-accent;
+  font-size: 3rem;
+  line-height: 1;
+  color: v.$neutral-light;
+}
+
+.project-card-text {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-card-text h4 {
+  margin-bottom: 12px;
+  font-family: v.$font-main;
+  font-size: v.$font-size-body-lg;
+  line-height: v.$line-height-body-lg;
+  font-weight: 600;
+  color: v.$neutral-dark;
+}
+
+.project-card-text p {
   max-width: 420px;
+  margin-bottom: 0;
+  color: v.$neutral-medium;
 }
+
+.project-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin: 0 28px 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(167, 154, 157, 0.45);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border: 1px solid rgba(31, 27, 28, 0.18);
+  border-radius: 999px;
+  font-family: v.$font-main;
+  font-size: v.$font-size-link-sm;
+  line-height: v.$line-height-link-sm;
+  color: v.$neutral-medium;
+  background-color: rgba(252, 250, 246, 0.65);
+}
+
+.project-arrow {
+  width: 44px;
+  height: 40px;
+  border: 1px solid v.$neutral-light;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: v.$neutral-dark;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
 /* -------------------------END PROJECTS--------------------------- */
 
 .approach-item {

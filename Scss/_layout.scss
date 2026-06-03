@@ -65,10 +65,12 @@
   max-width: 760px;
   margin-left: auto;
   text-align: right;
-  margin-top:-60px;
-  margin-bottom:-12px;
+  margin-bottom:48px;
+  margin-top:-40px;
 
 }
+
+
 .projects-asymmetric-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -82,6 +84,7 @@
 
 .approach-section {
   background-color: v.$primary-color;
+  margin-top:-60px;
 }
 
 .approach-grid {

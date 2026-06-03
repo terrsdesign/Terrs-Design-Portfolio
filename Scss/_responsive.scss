@@ -103,6 +103,34 @@
 
 }
 
+
+@media (max-width: 768px) {
+  .approach-path-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .approach-illustration {
+    justify-content: flex-start;
+  }
+
+  .approach-path {
+    min-height: auto;
+    display: grid;
+    gap: 16px;
+  }
+
+  .approach-line {
+    display: none;
+  }
+
+  .approach-step {
+    position: static;
+    max-width: 100%;
+  }
+}
+
+
   .contact-cta {
     padding: 36px 24px;
   }

@@ -460,9 +460,9 @@
 
 /* -------------------------END PROJECTS--------------------------- */
 
-/* =========================
-   APPROACH PATH
-========================= */
+
+
+/* ========================  APPROACH PATH ========================= */
 
 .approach-path-wrapper {
   position: relative;
@@ -490,71 +490,134 @@
   min-height: 300px;
 }
 
-.approach-line {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .approach-line path {
   fill: none;
-  stroke: v.$neutral-dark;
-  stroke-width: 1;
   stroke-linecap: round;
-  stroke-dasharray: 0;
+  stroke-linejoin: round;
 }
 
-.approach-step {
-  position: absolute;
-  max-width: 180px;
-  padding: 12px 14px;
-  background-color: v.$primary-color;
-  border-left: 1px solid color.adjust(v.$primary-color, $lightness: -10%);
+.approach-line-base {
+  stroke: v.$secondary-color;
+  stroke-width: 8px;
 }
+
+
+.approach-line-dots {
+  stroke: v.$primary-color;
+  stroke-width: 1.5;
+  stroke-dasharray: 7 12;
+}
+
+.approach-path-points {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.approach-path-point {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-weight: 600;
+  transform: translate(-50%, -50%);
+}
+
+/* Posizioni dei 5 punti sulla linea */
+
+.approach-path-point-01 {
+  left: 13%;
+  top: 50%;
+}
+
+.approach-path-point-02 {
+  left: 31%;
+  top: 52%;
+}
+
+.approach-path-point-03 {
+  left: 51%;
+  top: 50%;
+}
+
+.approach-path-point-04 {
+  left: 71%;
+  top: 54%;
+}
+
+.approach-path-point-05 {
+  left: 89%;
+  top: 52%;
+}
+
 
 .approach-step-01 {
   left: 6%;
-  top: 5%;
+  top: 65%;
 }
 
 .approach-step-02 {
-  left: 25%;
-  top: 76%;
+  left: 26%;
+  top: 6%;
 }
 
 .approach-step-03 {
-  left: 55%;
-  top: 0%;
+  left: 44%;
+  top: 65%;
 }
 
 .approach-step-04 {
-  right: 0;
-  top: 70%;
+  left: 64%;
+  top: 6%;
 }
 
-.approach-number {
+.approach-step-05 {
+  right: 0;
+  top: 67%;
+}
+
+
+
+.approach-step {
+  position: absolute;
+  width: 200px;
+  min-height: 96px;
+  padding: 0;
+  background-color: none;
+  overflow: visible;
+  z-index: 2;
+}
+
+.approach-step-title {
+  position: absolute;
+  top: -14px;
+  left: 0px;
   display: inline-flex;
-  margin-bottom: 8px;
+  align-items: center;
+  max-width: calc(100% - 28px);
+  padding: 4px 14px;
+  border-radius: 8px;
   font-family: v.$font-accent;
   font-size: v.$font-size-link-sm;
   line-height: v.$line-height-link-sm;
-  color: v.$secondary-color;
-}
-
-.approach-step h3 {
-  margin-bottom: 6px;
-  font-family: v.$font-accent;
-  font-size: v.$font-size-label;
-  line-height: v.$line-height-label;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  color: v.$primary-color;
+  background-color: v.$accent-color;
+  white-space: nowrap;
+  z-index: 3;
 }
 
 .approach-step p {
   margin-bottom: 0;
   font-size: v.$font-size-body-sm;
   line-height: v.$line-height-body-sm;
+  margin-top:10px;
 }
 
 .contact-cta {

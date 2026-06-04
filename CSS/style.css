@@ -752,7 +752,7 @@ p {
 
 .approach-step-02 {
   left: 26%;
-  top: 6%;
+  top: 18%;
 }
 
 .approach-step-03 {
@@ -762,7 +762,7 @@ p {
 
 .approach-step-04 {
   left: 64%;
-  top: 6%;
+  top: 14%;
 }
 
 .approach-step-05 {
@@ -808,6 +808,69 @@ p {
   margin-top: 10px;
 }
 
+.approach-note {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 560px;
+  margin: 56px auto 0;
+  padding: 24px 32px;
+  border-top: 1px solid rgb(245.625, 239.375, 226.875);
+  text-align: center;
+}
+
+.approach-note h2 {
+  margin-bottom: 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7DA6BB;
+  font-size: 1.75rem;
+}
+
+.approach-note p {
+  margin-bottom: 0;
+  font-family: "Satoshi-Variable", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  color: #1F1B1C;
+}
+
+.approach-note-arrow {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 2px;
+  margin-top: 18px;
+  background-color: #7DA6BB;
+  animation: arrow-move-left 1.6s ease-in-out infinite;
+}
+
+.approach-note-arrow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #7DA6BB;
+  border-bottom: 2px solid #7DA6BB;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+@keyframes arrow-move-left {
+  0% {
+    transform: translateX(0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateX(-12px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0.45;
+  }
+}
 .contact-cta {
   padding: 56px;
   border-radius: 16px;
@@ -830,7 +893,7 @@ p {
   color: #1F1B1C;
 }
 .contact-cta .btn-primary-custom:hover {
-  background-color: white;
+  background-color: #FCFAF6;
   color: #720E2B;
 }
 
@@ -886,17 +949,103 @@ p {
     transform: translateX(-50%);
   }
 }
-.footer-content p {
-  margin-bottom: 0;
-  font-size: 0.9rem;
+/* ------------------------- FOOTER --------------------------- */
+.site-footer {
+  padding: 72px 0 32px;
+  background-color: #720E2B;
+  color: #FCFAF6;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgb(136.7109375, 16.7890625, 51.56640625);
+}
+
+.footer-main {
+  max-width: 720px;
+}
+
+.footer-main .section-label {
+  margin-bottom: 16px;
+  color: #FCFAF6;
+}
+
+.footer-subtitle {
+  max-width: 700px;
+  margin-bottom: 32px;
+  font-family: "Satoshi-Variable", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  color: rgb(191.9696969697, 211.8484848485, 222.0303030303);
+  margin-top: -20px;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
 }
 
 .footer-links a {
-  color: #1F1B1C;
-  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #FCFAF6;
+  text-decoration: none;
 }
 .footer-links a:hover {
-  color: #720E2B;
+  color: #7DA6BB;
+}
+
+.footer-link-icon {
+  width: 22px;
+  height: 22px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.65rem;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+}
+
+.footer-bottom p {
+  margin-bottom: 0;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgb(239.25, 228.75, 207.75);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 @media (max-width: 992px) {
@@ -1009,6 +1158,12 @@ p {
     padding: 36px 24px;
   }
   .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
   }

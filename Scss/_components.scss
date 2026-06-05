@@ -374,11 +374,12 @@
 }
 
 .project-card-media {
-  min-height: 180px;
-  background-color: rgba(125, 166, 187, 0.12);
+  min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  background-color: v.$project-uxui-color;
 }
 
 .project-card-main-horizontal .project-card-media {

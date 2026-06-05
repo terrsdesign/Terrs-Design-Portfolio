@@ -361,7 +361,7 @@ p {
   text-decoration: none;
 }
 .nav-menu a:hover {
-  color: #720E2B;
+  color: #7DA6BB;
 }
 
 /* ------------------ FINE Nav Menu--------------------------- */
@@ -582,13 +582,6 @@ p {
   height: 100%;
 }
 
-.project-card-icon {
-  font-family: "Geist Mono", monospace;
-  font-size: 3rem;
-  line-height: 1;
-  color: #A79A9D;
-}
-
 .project-card-text {
   padding: 28px;
   display: flex;
@@ -598,11 +591,13 @@ p {
 
 .project-card-text h4 {
   margin-bottom: 12px;
-  font-family: "Satoshi-Variable", sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.625rem;
-  font-weight: 600;
+  font-family: "Sundrea", serif;
+  font-size: 1.75rem;
+  line-height: 2.1875rem;
+  font-weight: 500;
   color: #1F1B1C;
+  text-transform: uppercase;
+  color: #720E2B;
 }
 
 .project-card-text p {
@@ -618,7 +613,7 @@ p {
   gap: 24px;
   margin: 0 28px 24px;
   padding-top: 20px;
-  border-top: 1px solid rgba(167, 154, 157, 0.45);
+  border-top: 1px solid rgb(245.625, 239.375, 226.875);
 }
 
 .project-tags {
@@ -631,28 +626,18 @@ p {
   display: inline-flex;
   align-items: center;
   padding: 4px 12px;
-  border: 1px solid rgba(31, 27, 28, 0.18);
-  border-radius: 999px;
-  font-family: "Satoshi-Variable", sans-serif;
+  border-radius: 8px;
+  font-family: "Geist Mono", monospace;
   font-size: 0.75rem;
   line-height: 1rem;
   color: #4A4243;
-  background-color: rgba(252, 250, 246, 0.65);
+  background-color: rgb(238.2380952381, 235.7619047619, 236.3333333333);
 }
 
 .project-arrow {
   width: 44px;
-  height: 40px;
-  border: 1px solid #A79A9D;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  text-decoration: none;
   color: #1F1B1C;
-  font-size: 1.4rem;
-  line-height: 1;
+  font-size: 1.75rem;
 }
 
 /* -------------------------END PROJECTS--------------------------- */

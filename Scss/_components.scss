@@ -156,7 +156,7 @@
   text-decoration: none;
 
   &:hover {
-    color: v.$secondary-color;
+    color: v.$accent-color;
   }
 }
 
@@ -385,12 +385,6 @@
   height: 100%;
 }
 
-.project-card-icon {
-  font-family: v.$font-accent;
-  font-size: 3rem;
-  line-height: 1;
-  color: v.$neutral-light;
-}
 
 .project-card-text {
   padding: 28px;
@@ -401,11 +395,13 @@
 
 .project-card-text h4 {
   margin-bottom: 12px;
-  font-family: v.$font-main;
-  font-size: v.$font-size-body-lg;
-  line-height: v.$line-height-body-lg;
-  font-weight: 600;
+  font-family: v.$font-heading;
+  font-size: v.$font-size-h4;
+  line-height: v.$line-height-h4;
+  font-weight: 500;
   color: v.$neutral-dark;
+  text-transform: uppercase;
+  color: v.$secondary-color;
 }
 
 .project-card-text p {
@@ -421,7 +417,7 @@
   gap: 24px;
   margin: 0 28px 24px;
   padding-top: 20px;
-  border-top: 1px solid rgba(167, 154, 157, 0.45);
+  border-top: 1px solid color.adjust(v.$primary-color, $lightness: -5%);
 }
 
 .project-tags {
@@ -434,28 +430,18 @@
   display: inline-flex;
   align-items: center;
   padding: 4px 12px;
-  border: 1px solid rgba(31, 27, 28, 0.18);
-  border-radius: 999px;
-  font-family: v.$font-main;
+  border-radius: 8px;
+  font-family: v.$font-accent;
   font-size: v.$font-size-link-sm;
   line-height: v.$line-height-link-sm;
   color: v.$neutral-medium;
-  background-color: rgba(252, 250, 246, 0.65);
+  background-color: color.adjust(v.$neutral-light, $lightness: 30%);
 }
 
 .project-arrow {
   width: 44px;
-  height: 40px;
-  border: 1px solid v.$neutral-light;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  text-decoration: none;
   color: v.$neutral-dark;
-  font-size: 1.4rem;
-  line-height: 1;
+  font-size: v.$font-size-h4;
 }
 
 /* -------------------------END PROJECTS--------------------------- */

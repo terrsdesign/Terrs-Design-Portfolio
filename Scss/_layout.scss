@@ -42,7 +42,7 @@
 .hero-section {
   position: relative;
   z-index: 1;
-  overflow: visible;
+  overflow: hidden;
   padding-bottom: clamp(100px, 12vw, 180px);
 }
 

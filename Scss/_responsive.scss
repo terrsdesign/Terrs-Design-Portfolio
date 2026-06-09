@@ -147,3 +147,48 @@
     align-items: flex-start;
   }
 }
+
+
+
+/* =========================  Progetti ========================= */
+
+@media (max-width: 768px) {
+  .case-hero {
+    padding: 72px 0 56px;
+  }
+
+  .case-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-meta {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(252, 250, 246, 0.45);
+    padding-bottom: 32px;
+  }
+
+@media (max-width: 992px) {
+  .case-overview-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .case-overview-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+  .case-process-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .case-process-timeline {
+    padding-left: 48px;
+  }
+
+  .case-process-step {
+    grid-template-columns: 56px 1fr;
+  }
+}

@@ -192,3 +192,68 @@
     grid-template-columns: 56px 1fr;
   }
 }
+
+
+/* =========================
+   CASE STUDY RESPONSIVE
+   Responsive generico per le sezioni case study.
+========================= */
+
+@media (max-width: 768px) {
+  .case-section {
+    padding: 72px 0;
+  }
+
+  .case-section-title {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .case-layout-2 {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .case-slide {
+    height: 240px;
+  }
+
+  .case-numbered-list li {
+    grid-template-columns: 40px 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-gallery {
+    max-width: 100%;
+  }
+
+  .case-gallery-viewport {
+    height: 260px;
+  }
+
+  .case-gallery-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.6rem;
+  }
+
+  .case-gallery-arrow-prev {
+    left: 10px;
+  }
+
+  .case-gallery-arrow-next {
+    right: 10px;
+  }
+
+  .case-lightbox {
+    padding: 20px;
+  }
+
+  .case-lightbox-close {
+    top: 16px;
+    right: 16px;
+  }
+}

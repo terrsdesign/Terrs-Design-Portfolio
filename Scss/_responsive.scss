@@ -257,3 +257,26 @@
     right: 16px;
   }
 }
+
+@media (max-width: 768px) {
+  .case-survey-bubbles {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .case-issues-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .case-issue-card {
+    grid-template-columns: 1fr;
+  }
+
+  .case-issue-number {
+    text-align: left;
+    margin-top: 8px;
+  }
+}

@@ -3,6 +3,7 @@
 
 
 
+
 .ecodream-page .navbar,
 .ecodream-page .site-footer {
   background-color: v.$ecodream-color;
@@ -90,6 +91,21 @@
   font-size: v.$font-size-body-sm;
   line-height: v.$line-height-body-sm;
 }
+
+.highlight-quote {
+  max-width: 80%;
+  border-left: 1px solid #6f2f3f;
+  color:v.$ecodream-color;
+  font-size: v.$font-size-body-lg;
+  line-height: v.$line-height-body-lg;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  padding-left:20px;
+  margin-left:50px!important;
+
+}
+
 
 
 .case-study-page {
@@ -198,6 +214,11 @@
 
 
 /* PROCESS */
+
+
+.case-research > .container > .case-block {
+  margin-top: 96px;
+}
 
 .case-process {
   padding: 60px 0;
@@ -342,7 +363,7 @@
 ========================= */
 
 .case-section {
-  padding: 112px 0;
+  padding: 112px 0 0 0;
   background-color: v.$primary-color;
 }
 
@@ -411,7 +432,7 @@
 }
 
 .case-activity {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .case-activity p
@@ -440,12 +461,21 @@
   height: 380px;
   overflow: hidden;
   border-bottom: 1px solid color.adjust(v.$primary-color, $lightness: -14%);
-  background-color: color.adjust(v.$primary-color, $lightness: -2%);
+  background-color: v.$primary-color;
 }
+
+/* Singola immagine della gallery.
+   La gallery mostra 2 immagini affiancate per volta.
+   JavaScript assegna le classi:
+   - is-active-left alla prima immagine visibile
+   - is-active-right alla seconda immagine visibile
+*/
 
 .case-gallery-slide {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  width: calc(50% - 8px);
   display: block;
   opacity: 0;
   visibility: hidden;
@@ -457,7 +487,15 @@
   text-decoration: none;
 }
 
-.case-gallery-slide.is-active {
+.case-gallery-slide.is-active-left {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.case-gallery-slide.is-active-right {
+  left: calc(50% + 8px);
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
@@ -549,6 +587,46 @@
   transform: scale(1.2);
 }
 
+
+/* =========================
+   CASE IMAGE GRID
+   Griglia riutilizzabile per mostrare immagini statiche affiancate.
+   Utile quando non serve una gallery, ad esempio con solo 2 immagini.
+========================= */
+
+.case-image-grid {
+  display: grid;
+  gap: 24px;
+  width: min(100%, 900px);
+  margin-inline: auto;
+}
+
+.case-image-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.case-image-card {
+  display: block;
+  overflow: hidden;
+  border: 1px solid color.adjust(v.$primary-color, $lightness: -5%);
+  border-radius: v.$radius-md;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.case-image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(31, 27, 28, 0.08);
+}
+
+.case-image-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* =========================
    CASE STUDY LIGHTBOX
    Overlay globale per aprire le immagini della gallery in grande.
@@ -620,7 +698,7 @@
 
 .case-numbered-list {
   display: grid;
-  gap: 28px;
+  gap: 16px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -629,9 +707,9 @@
 .case-numbered-list li {
   display: grid;
   grid-template-columns: 48px 1fr;
-  gap: 20px;
+  gap: 8px;
   align-items: start;
-  padding-bottom: 24px;
+  padding-bottom: 12px;
   border-bottom: 1px solid color.adjust(v.$primary-color, $lightness: -12%);
 }
 
@@ -667,7 +745,7 @@
 
 .case-score-list {
   display: grid;
-  margin-top: px;
+  margin-top: 20px;
   padding:10px 50px 10px
 }
 
@@ -702,3 +780,182 @@
 .case-stars-empty {
   color: v.$neutral-light;
 }
+
+
+/* =========================
+   CASE SURVEY BUBBLES
+   Nuvolette testuali per risposte del sondaggio.
+========================= */
+
+.case-survey-bubbles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 64px;
+  margin: 32px auto 120px;
+  justify-items: center;
+  max-width: 960px;
+}
+
+.case-survey-bubble {
+  position: relative;
+  margin: 0;
+  padding: 16px 32px;
+  border-radius: 999px;
+  background-color: v.$ecodream-accent-color;
+  transform: rotate(var(--bubble-rotate, 0deg)) translateY(var(--bubble-y, 0));
+}
+
+.case-survey-bubble::after {
+  content: "";
+  position: absolute;
+  left: 36px;
+  bottom: -12px;
+  width: 24px;
+  height: 24px;
+  background-color: v.$ecodream-accent-color;
+  border-right: 1px solid color.adjust(v.$primary-color, $lightness: -14%);
+  border-bottom: 1px solid color.adjust(v.$primary-color, $lightness: -14%);
+  transform: rotate(45deg);
+}
+
+.case-survey-bubble p {
+  margin: 0;
+  font-family: v.$font-main;
+  font-size: v.$font-size-body-sm;
+  line-height: v.$line-height-body-sm;
+  color: v.$primary-color;
+}
+
+/* variazioni automatiche */
+
+.case-survey-bubble:nth-child(1) {
+  --bubble-rotate: -2deg;
+  --bubble-y: 0;
+  max-width: 92%;
+}
+
+.case-survey-bubble:nth-child(2) {
+  --bubble-rotate: 1.5deg;
+  --bubble-y: 24px;
+  max-width: 86%;
+  justify-self: end;
+}
+
+.case-survey-bubble:nth-child(3) {
+  --bubble-rotate: 2deg;
+  --bubble-y: -8px;
+    max-width: 88%;
+
+}
+
+.case-survey-bubble:nth-child(4) {
+  --bubble-rotate: -1.5deg;
+  --bubble-y: 18px;
+  max-width: 84%;
+  justify-self: end;
+}
+
+.case-survey-bubble:nth-child(5) {
+  --bubble-rotate: 1deg;
+  --bubble-y: -4px;
+    max-width: 90%;
+
+}
+
+.case-survey-bubble:nth-child(6) {
+  --bubble-rotate: -2.5deg;
+  --bubble-y: 20px;
+    max-width: 74%;
+    justify-self: flex-end;
+
+}
+
+.case-survey-bubble:nth-child(even)::after {
+  left: auto;
+  right: 36px;
+}
+
+
+
+
+/* =========================  CASE ISSUES GRID ========================= */
+
+.case-issues-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+  margin: auto;
+  max-width: 960px;
+  justify-items: auto;
+  margin-top:24px;
+}
+
+.case-issue-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid color.adjust(v.$primary-color, $lightness: -5%);
+}
+
+.case-issue-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 999px;
+  background-color: v.$ecodream-accent-color;
+  color: v.$primary-color;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: v.$font-accent;
+  font-size: v.$font-size-body-sm;
+}
+
+.case-issue-text h4 {
+  margin-bottom: 6px;
+}
+
+.case-issue-text li {
+  margin: 0;
+  font-size: v.$font-size-body-sm;
+}
+
+.case-issue-number {
+  min-width: 56px;
+  text-align: right;
+}
+
+.case-issue-number span {
+  display: block;
+  font-family: v.$font-heading;
+  font-size: v.$font-size-h4;
+  color: v.$ecodream-accent-color;
+}
+
+.case-issue-number small {
+  display: block;
+  margin-top: 8px;
+  font-family: v.$font-accent;
+  font-size: 0.65rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: v.$neutral-dark;
+}
+
+
+
+/* =========================
+   STRATEGY SECTION
+   Spacing specifico per la fase Strategy.
+========================= */
+
+.case-strategy > .container > .case-block {
+  margin-top: 96px;
+}
+
+.case-layout-equal {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+

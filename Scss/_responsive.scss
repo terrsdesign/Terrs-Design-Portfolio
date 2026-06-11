@@ -280,3 +280,41 @@
     margin-top: 8px;
   }
 }
+
+@media (max-width: 992px) {
+  .case-wireframe-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .case-wireframe-preview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .case-page-flow {
+    grid-template-columns: repeat(5, auto);
+    overflow-x: auto;
+    justify-content: start;
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .case-wireframe-preview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+@media (max-width: 992px) {
+  .case-design-system {
+    grid-template-columns: 1fr;
+  }
+
+  .case-design-system-block {
+    padding: 40px 24px;
+  }
+
+  .case-layout-reverse {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1271,6 +1271,36 @@ p {
     margin-top: 8px;
   }
 }
+@media (max-width: 992px) {
+  .case-wireframe-layout {
+    grid-template-columns: 1fr;
+  }
+  .case-wireframe-preview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .case-page-flow {
+    grid-template-columns: repeat(5, auto);
+    overflow-x: auto;
+    justify-content: start;
+    padding-bottom: 8px;
+  }
+}
+@media (max-width: 640px) {
+  .case-wireframe-preview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 992px) {
+  .case-design-system {
+    grid-template-columns: 1fr;
+  }
+  .case-design-system-block {
+    padding: 40px 24px;
+  }
+  .case-layout-reverse {
+    grid-template-columns: 1fr;
+  }
+}
 .ecodream-page .navbar,
 .ecodream-page .site-footer {
   background-color: #B3AC6D;
@@ -1361,7 +1391,7 @@ p {
 .highlight-quote {
   max-width: 80%;
   border-left: 1px solid #6f2f3f;
-  color: #B3AC6D;
+  color: rgb(155.8648648649, 148.3918918919, 81.1351351351);
   font-size: 1.25rem;
   line-height: 1.625rem;
   font-weight: 400;
@@ -2171,4 +2201,120 @@ p {
 
 .case-layout-equal {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.case-icon-list li {
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.case-list-image-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  align-self: start;
+  margin-top: 2px;
+}
+
+/* =========================
+   CASE WIREFRAMES
+========================= */
+.case-wireframe-layout {
+  grid-template-columns: minmax(0, 0.2fr) minmax(0, 0.8fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.case-wireframe-layout.case-layout-reverse {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 0.2fr);
+}
+
+.case-wireframe-preview {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.case-wireframe-card {
+  display: grid;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.case-wireframe-card > p {
+  margin: 0;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  text-transform: uppercase;
+  color: #99567E;
+  font-weight: 500;
+  text-align: center;
+}
+
+.case-wireframe-card .case-image-card {
+  aspect-ratio: 9/16;
+  display: block;
+  overflow: hidden;
+}
+
+.case-wireframe-card .case-image-card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+  display: block;
+}
+
+.case-page-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.case-page-flow-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Solo le icone/pagine hanno il cerchio */
+.case-page-flow-item > span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #B3AC6D;
+  color: #FCFAF6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Geist Mono", monospace;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.case-page-flow-item p {
+  margin: 0;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  text-transform: uppercase;
+  color: #4A4243;
+}
+
+/* =========================
+   DESIGN SYSTEM BAND
+   Blocco full width per la parte Design System.
+========================= */
+.case-design-system-band {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: 96px;
+  margin-bottom: 96px;
+  padding: 96px 0;
+  background-color: #ffffff;
 }
